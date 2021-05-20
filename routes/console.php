@@ -3,6 +3,8 @@
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 
+/** @var mixed $this  */
+
 /*
 |--------------------------------------------------------------------------
 | Console Routes
