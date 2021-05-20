@@ -35,18 +35,6 @@
         <table class="table">
             <tbody>
                 <tr>
-                    <th>Bet player</th>
-                    <td>
-                        {{ $game->getBetPlayer() }}
-                    </td>
-                </tr>
-                <tr>
-                    <th>Bet computer</th>
-                    <td>
-                        {{ $game->getBetComputer() }}
-                    </td>
-                </tr>
-                <tr>
                     <th>Points player</th>
                     <td>
                         {{ $game->getPointsPlayer() }}
@@ -56,6 +44,18 @@
                     <th>Points computer</th>
                     <td>
                         {{ $game->getPointsComputer() }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Bet player</th>
+                    <td>
+                        {{ $game->getBetPlayer() }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Bet computer</th>
+                    <td>
+                        {{ $game->getBetComputer() }}
                     </td>
                 </tr>
                 <tr>
@@ -79,6 +79,16 @@
             @elseif ($game->getWinner() === 'computer')
                 <h3 class="title is-3">Oh no! You lost!</h3>
             @endif
+
+            @if ($game->getPlayerBetWon())
+                <h4 class="title is-4 mb-1">You won your bet!</h4>
+                <p class="mb-4">You've been rewarded with 1 extra win point</p>
+            @endif
+
+            @if ($game->getComputerBetWon())
+                <h4 class="title is-4 mb-1">The computer won their bet!</h4>
+                <p class="mb-4">They've been rewarded with 1 extra win point</p>
+                @endif
   
             <p class="mb-2">You can place a bet for the next round. If you're correct you'll gain an extra win point.</p>
   

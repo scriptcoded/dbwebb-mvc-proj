@@ -119,6 +119,8 @@ class Game
 
     public function playComputer()
     {
+        $computer_won = false;
+
         while ($this->points_computer < 21) {
             $this->hand->roll();
 
@@ -134,12 +136,36 @@ class Game
             $beat_game = $this->points_computer === 21;
 
             if ($beat_player || $beat_game) {
-                $this->setWinnerComputer();
-                return;
+                $computer_won = true;
+                break;
             }
         }
 
-        $this->setWinnerPlayer();
+        if ($computer_won) {
+            $this->setWinnerComputer();
+        } else {
+            $this->setWinnerPlayer();
+        }
+
+        $this->checkBets();
+    }
+
+    function getPlayerBetWon () {
+        return $this->getPointsPlayer() === $this->getBetPlayer();
+    }
+
+    function getComputerBetWon () {
+        return $this->getPointsComputer() === $this->getBetComputer();
+    }
+
+    function checkBets() {
+        if ($this->getPlayerBetWon()) {
+            $this->wins_player += 1;
+        }
+
+        if ($this->getComputerBetWon()) {
+            $this->wins_computer += 1;
+        }
     }
 
     public function nextRound()
