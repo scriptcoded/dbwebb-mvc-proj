@@ -31,6 +31,10 @@ class Game21Controller extends BaseController
     public function setDice(Request $request)
     {
         $game = $request->session()->get('game21');
+
+        $game->setBetPlayer(intval($request->input('bet')));
+        $game->randomizeBetComputer();
+
         $game->setDiceCount(intval($request->input('dice')));
 
         return redirect()->route('game21');
@@ -55,6 +59,10 @@ class Game21Controller extends BaseController
     public function nextRound(Request $request)
     {
         $game = $request->session()->get('game21');
+
+        $game->setBetPlayer(intval($request->input('bet')));
+        $game->randomizeBetComputer();
+
         $game->nextRound();
 
         return redirect()->route('game21');

@@ -14,6 +14,9 @@ class Game
     private int $wins_player = 0;
     private int $wins_computer = 0;
 
+    private int $bet_player = 0;
+    private int $bet_computer = 0;
+
     private ?string $winner = null;
 
     public function getHand()
@@ -66,6 +69,30 @@ class Game
         } else if ($this->points_player > 21) {
             $this->setWinnerComputer();
         }
+    }
+
+    public function setBetPlayer($bet)
+    {
+        $this->bet_player = $bet;
+    }
+
+    public function getBetPlayer()
+    {
+        return $this->bet_player;
+    }
+
+    public function setBetComputer($bet)
+    {
+        $this->bet_computer = $bet;
+    }
+
+    public function getBetComputer()
+    {
+        return $this->bet_computer;
+    }
+
+    public function randomizeBetComputer () {
+        $this->setBetComputer(random_int(16, 21));
     }
 
     public function setWinnerPlayer()
