@@ -1,4 +1,10 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/img/dice-six-faces-1.svg": "/img/dice-six-faces-1.svg",
+    "/img/dice-six-faces-2.svg": "/img/dice-six-faces-2.svg",
+    "/img/dice-six-faces-3.svg": "/img/dice-six-faces-3.svg",
+    "/img/dice-six-faces-4.svg": "/img/dice-six-faces-4.svg",
+    "/img/dice-six-faces-5.svg": "/img/dice-six-faces-5.svg",
+    "/img/dice-six-faces-6.svg": "/img/dice-six-faces-6.svg"
 }

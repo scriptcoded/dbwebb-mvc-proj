@@ -16,3 +16,27 @@
   width: 24rem;
 }
 
+.game21-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.score-avatar {
+  font-size: 5rem;
+  white-space: nowrap;
+}
+
+.dice-container {
+  display: flex;
+  align-items: center;
+}
+
+.dice {
+  width: 6rem;
+}
+
+.dice-sum {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
