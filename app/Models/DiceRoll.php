@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @property int $id
  * @property int $result
+ * @property int $dice
  * @property string $rolled_by
  */
 class DiceRoll extends Model

@@ -17,6 +17,7 @@ class CreateDiceRollsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('result');
+            $table->integer('dice');
             $table->string('rolled_by');
         });
     }
