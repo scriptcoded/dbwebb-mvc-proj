@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/histogram.css') }}">
     <script src="{{ URL::asset('js/app.js') }}"></script>
   </head>
   <body>
