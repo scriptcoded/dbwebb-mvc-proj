@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Game21Controller;
 use App\Http\Controllers\HighscoreController;
+use App\Http\Controllers\StatisticsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,5 @@ Route::post('/stop', [Game21Controller::class, 'stop'])->name('game21.stop');
 Route::post('/save-score', [Game21Controller::class, 'saveScore'])->name('game21.saveScore');
 
 Route::get('/highscores', [HighscoreController::class, 'index'])->name('highscores');
+
+Route::get('/statistics', [StatisticsController::class, 'index'])->name('statistics');

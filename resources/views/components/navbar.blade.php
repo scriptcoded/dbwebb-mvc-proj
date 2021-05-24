@@ -21,6 +21,9 @@
           <a class="button {{ Route::is('highscores') ? 'is-primary' : 'is-text' }}" href="{{ URL::Route('highscores') }}">
             Highscores
           </a>
+          <a class="button {{ Route::is('statistics') ? 'is-primary' : 'is-text' }}" href="{{ URL::Route('statistics') }}">
+            Statistics
+          </a>
         </div>
       </div>
     </div>
