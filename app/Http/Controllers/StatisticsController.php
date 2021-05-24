@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class StatisticsController extends BaseController
 {
     public function index(Request $request)
-    {        
+    {
         return view('statistics');
     }
 }

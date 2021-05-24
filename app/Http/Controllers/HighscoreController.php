@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class HighscoreController extends BaseController
 {
     public function index(Request $request)
-    {        
+    {
         $startDate = null;
         $endDate = null;
         $name = null;
