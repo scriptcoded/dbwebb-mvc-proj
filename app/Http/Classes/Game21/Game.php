@@ -19,6 +19,17 @@ class Game
 
     private ?string $winner = null;
 
+    private $onPlayerRoll;
+    private $onComputerRoll;
+
+    public function setOnPlayerRoll ($onPlayerRoll) {
+        $this->onPlayerRoll = $onPlayerRoll;
+    }
+
+    public function setOnComputerRoll ($onComputerRoll) {
+        $this->onComputerRoll = $onComputerRoll;
+    }
+
     public function getHand()
     {
         return $this->hand;
@@ -59,6 +70,11 @@ class Game
     public function roll()
     {
         $this->hand->roll();
+
+        if (isset($this->onPlayerRoll)) {
+            $results = $this->hand->getLastResults();
+            call_user_func($this->onPlayerRoll, $results);
+        }
 
         $result = $this->hand->getLastResult();
 
@@ -123,6 +139,11 @@ class Game
 
         while ($this->points_computer < 21) {
             $this->hand->roll();
+
+            if (isset($this->onComputerRoll)) {
+                $results = $this->hand->getLastResults();
+                call_user_func($this->onComputerRoll, $results);
+            }
 
             $result = $this->hand->getLastResult();
 
