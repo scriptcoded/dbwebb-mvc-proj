@@ -1,3 +1,7 @@
+.main-container {
+  min-height: 75vh;
+}
+
 .navbar-brand {
   font-family: 'Itim', cursive;
   font-size: 2rem;

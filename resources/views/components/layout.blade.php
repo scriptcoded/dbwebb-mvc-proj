@@ -13,7 +13,7 @@
   </head>
   <body>
     <section class="section">
-      <div class="container">
+      <div class="container main-container">
         <x-navbar />
 
         {{ $slot }}
