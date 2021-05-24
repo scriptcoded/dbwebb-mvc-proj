@@ -98,15 +98,18 @@ class Game21Controller extends BaseController
         ]);
     }
 
-    static public function onPlayerRoll($rolls) {
+    public static function onPlayerRoll($rolls)
+    {
         self::saveRolls($rolls, 'player');
     }
 
-    static public function onComputerRoll($rolls) {
+    public static function onComputerRoll($rolls)
+    {
         self::saveRolls($rolls, 'computer');
     }
 
-    static public function saveRolls($rolls, $rolledBy) {
+    public static function saveRolls($rolls, $rolledBy)
+    {
         $data = [];
 
         // Store every single dice roll
@@ -129,6 +132,7 @@ class Game21Controller extends BaseController
         }
 
         // Do the insertion
+        /** @phpstan-ignore-next-line */
         DiceRoll::insert($data);
     }
 }

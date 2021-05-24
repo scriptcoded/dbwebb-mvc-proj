@@ -22,11 +22,13 @@ class Game
     private $onPlayerRoll;
     private $onComputerRoll;
 
-    public function setOnPlayerRoll ($onPlayerRoll) {
+    public function setOnPlayerRoll($onPlayerRoll)
+    {
         $this->onPlayerRoll = $onPlayerRoll;
     }
 
-    public function setOnComputerRoll ($onComputerRoll) {
+    public function setOnComputerRoll($onComputerRoll)
+    {
         $this->onComputerRoll = $onComputerRoll;
     }
 
@@ -107,7 +109,8 @@ class Game
         return $this->bet_computer;
     }
 
-    public function randomizeBetComputer () {
+    public function randomizeBetComputer()
+    {
         $this->setBetComputer(random_int(16, 21));
     }
 
@@ -171,15 +174,18 @@ class Game
         $this->checkBets();
     }
 
-    function getPlayerBetWon () {
+    public function getPlayerBetWon()
+    {
         return $this->getPointsPlayer() === $this->getBetPlayer();
     }
 
-    function getComputerBetWon () {
+    public function getComputerBetWon()
+    {
         return $this->getPointsComputer() === $this->getBetComputer();
     }
 
-    function checkBets() {
+    public function checkBets()
+    {
         if ($this->getPlayerBetWon()) {
             $this->wins_player += 1;
         }

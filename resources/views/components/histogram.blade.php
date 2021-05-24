@@ -3,15 +3,15 @@
 $histogramStyle = '';
 
 if (isset($width)) {
-  $histogramStyle .= "width: $width;";
+    $histogramStyle .= "width: $width;";
 }
 
 if (isset($height)) {
-  $histogramStyle .= "height: $height;";
+    $histogramStyle .= "height: $height;";
 }
 
 if (isset($pillarColor)) {
-  $histogramStyle .= "--pillar-color: $pillarColor;";
+    $histogramStyle .= "--pillar-color: $pillarColor;";
 }
 
 ?>

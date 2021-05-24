@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\Game21Controller;
 use App\Http\Controllers\HighscoreController;
 use App\Http\Controllers\StatisticsController;
