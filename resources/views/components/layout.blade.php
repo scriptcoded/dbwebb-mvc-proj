@@ -12,12 +12,15 @@
     <script src="{{ URL::asset('js/app.js') }}"></script>
   </head>
   <body>
-  <section class="section">
-    <div class="container">
-      <x-navbar />
-      
-      {{ $slot }}
-    </div>
-  </section>
+    <section class="section">
+      <div class="container">
+        <x-navbar />
+
+        {{ $slot }}
+
+      </div>
+    </section>
+
+    <x-footer />
   </body>
 </html>
