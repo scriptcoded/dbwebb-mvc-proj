@@ -12,8 +12,8 @@ Follow the steps outlined below to get the project running locally.
 
 1. Start by cloning the repo and entering the project
     ```sh
-    git clone git@github.com:scriptcoded/dbwebb-mvc-framework.git
-    cd dbwebb-mvc-framework
+    git clone git@github.com:scriptcoded/dbwebb-mvc-proj.git
+    cd dbwebb-mvc-proj
     ```
 1. Install composer dependencies
     ```sh
