@@ -3,11 +3,13 @@
   width: 100%;
   height: 400px;
   overflow: hidden;
+
+  --pillar-color: blueviolet;
 }
 
 .histogram__y-axis {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   width: 20px;
   margin-bottom: 20px;
 }
@@ -17,7 +19,14 @@
   display: flex;
   justify-content: center;
   flex: 1;
+  min-height: 0;
   border-top: 1px solid #ccc;
+  cursor: default;
+}
+
+.histogram__y-axis__label > svg {
+  display: block;
+  height: 100%;
 }
 
 .histogram__y-axis__label::after {
@@ -29,6 +38,11 @@
   height: 100%;
   border-top: 1px solid #eee;
   z-index: -1;
+}
+
+.histogram__y-axis__label:hover::after {
+  border-color: #aaa;
+  z-index: 1;
 }
 
 .histogram__x-axis {
@@ -61,5 +75,5 @@
   flex: 1;
 }
 .histogram__column__pillar__fill {
-  background-color: blueviolet;
+  background-color: var(--pillar-color);
 }
