@@ -43,7 +43,7 @@ Follow the steps outlined below to get the project running locally.
 
 ## Flowchart
 
-![Flowchart](flowchart.jpg)
+![Flowchart](doc/design/flowchart.jpg)
 
 ## About
 
