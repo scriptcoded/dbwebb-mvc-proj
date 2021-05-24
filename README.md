@@ -41,6 +41,10 @@ Follow the steps outlined below to get the project running locally.
     ```
 1. Hack away!
 
+## Flowchart
+
+![Flowchart](flowchart.jpg)
+
 ## About
 
 Made by [Malcolm Nihlén](https://github.com/scriptcoded).
