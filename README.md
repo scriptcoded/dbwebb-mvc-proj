@@ -2,6 +2,8 @@
 
 # dbwebb proj - manh20
 
+[![Build Status](https://www.travis-ci.com/scriptcoded/dbwebb-mvc-proj.svg?branch=master)](https://www.travis-ci.com/scriptcoded/dbwebb-mvc-proj)
+
 This is my final project in the course mvc-v1 at BTH. It's an implementation of the game "Game 21" including a betting feature, scoreboard and statistics.
 
 The application is built with PHP and the Laravel framework. The database used is MySQL and is accessed through the Artisan ORM.
